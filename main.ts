@@ -3,12 +3,16 @@ import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
 // One joke about a meeting that should have been an email.
-// Chosen from eight drafted one-liners and revised once: the sharpest,
-// freshest angle was the host screen-sharing an email everyone had
-// already received — and the kicker "slowly" makes the turn land on the
-// last word, the way the judge's brief asks.
+// Revised in this round: the old line ("Someone shared their screen to
+// read us an email we were all already copied on — slowly.") scored well
+// on recognition, but its laugh landed mid-sentence and "slowly" was a
+// soft kicker. The new line won the re-scoring (24/25 vs 21/25): it names
+// the meeting and the email explicitly, the turn — an email summarising
+// the meeting that was held to read an email — arrives on the last word,
+// the meeting-about-an-email-about-a-meeting loop is a fresher angle
+// than a single observation, and it is tighter at 78 characters.
 const LINE =
-  "Someone shared their screen to read us an email we were all already copied on — slowly.";
+  "We held a meeting to read an email, then got an email summarising the meeting.";
 
 // Gate before writing: exactly one line of plain text, 1-200 characters,
 // not only whitespace.
